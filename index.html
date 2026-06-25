@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pensieve — AI Studio</title>
+<title>PensieveX — AI Studio</title>
 <script src="https://js.puter.com/v2/"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════════
-   PENSIEVE — DESIGN SYSTEM v2
+   PensieveX — DESIGN SYSTEM v2
    Palette: Deep space · Electric violet · Crisp silver
    Style: Clean, spacious, modern
 ═══════════════════════════════════════════════ */
@@ -1052,7 +1052,7 @@ body::after {
 <div id="auth-overlay" style="position:fixed;inset:0;z-index:9999;background:var(--bg0);display:none;align-items:center;justify-content:center;">
   <div style="background:var(--bg2);border:1px solid var(--border-strong);border-radius:var(--r-xl);padding:44px 36px;width:360px;text-align:center;box-shadow:var(--shadow-lg);">
     <img src="icon.png" style="width:72px;height:72px;object-fit:contain;border-radius:16px;margin:0 auto 22px;display:block;">
-    <h2 style="font-size:21px;font-weight:700;letter-spacing:-0.5px;margin-bottom:8px;color:var(--text0);">Welcome to Pensieve</h2>
+    <h2 style="font-size:21px;font-weight:700;letter-spacing:-0.5px;margin-bottom:8px;color:var(--text0);">Welcome to PensieveX</h2>
     <p style="font-size:13.5px;color:var(--text2);margin-bottom:24px;line-height:1.65;">Your AI studio. Sign in to continue.</p>
 
     <!-- EMAIL/PASSWORD FORM -->
@@ -1141,9 +1141,9 @@ body::after {
 <main id="chat-center">
   <div id="messages">
     <div id="welcome-screen">
-      <img src="app_icon.png" style="width:180px;height:180px;object-fit:contain;border-radius:24px;margin-bottom:24px;">
+      <img src="icon.png" style="width:180px;height:180px;object-fit:contain;border-radius:24px;margin-bottom:24px;">
       <h1>What can I help with?</h1>
-      <p>Upload context in the sidebar — PDFs, images, URLs, text — then ask anything. Pensieve knows it all.</p>
+      <p>Upload context in the sidebar — PDFs, images, URLs, text — then ask anything. PensieveX knows it all.</p>
       <div class="prompt-chips" id="prompt-chips">
         <button class="chip" onclick="useChip(this)">Explain a concept with math</button>
         <button class="chip" onclick="useChip(this)">Summarize uploaded context</button>
@@ -1488,9 +1488,9 @@ function rebuildMessages() {
   messagesEl.innerHTML = '';
   if(state.history.length===0) {
     messagesEl.innerHTML = `<div id="welcome-screen">
-      <img src="app_icon.png" style="width:72px;height:72px;object-fit:contain;border-radius:50%;margin-bottom:24px;">
+      <img src="icon.png" style="width:72px;height:72px;object-fit:contain;border-radius:50%;margin-bottom:24px;">
       <h1>What can I help with?</h1>
-      <p>Upload context in the sidebar — PDFs, images, URLs, text — then ask anything. Pensieve knows it all.</p>
+      <p>Upload context in the sidebar — PDFs, images, URLs, text — then ask anything. PensieveX knows it all.</p>
       <div class="prompt-chips">
         <button class="chip" onclick="useChip(this)">Explain a concept with math</button>
         <button class="chip" onclick="useChip(this)">Summarize uploaded context</button>
@@ -1795,7 +1795,7 @@ async function sendMessage() {
     ? `\n\nRemembered facts about the user:\n${state.memory.map(m => `- ${m.text}`).join('\n')}\nUse these naturally when relevant. If the user asks what you remember, answer from this list.`
     : '';
 
-  const systemPrompt = `You are Pensieve, a world-class AI assistant built for power users. Your responses are precise, well-structured, and visually rich.
+  const systemPrompt = `You are PensieveX, a world-class AI assistant built for power users. Your responses are precise, well-structured, and visually rich.
 
 Guidelines:
 - Use markdown extensively: headers (##, ###), **bold**, *italic*, \`inline code\`, code blocks with language tags, tables, blockquotes, and bullet lists.
